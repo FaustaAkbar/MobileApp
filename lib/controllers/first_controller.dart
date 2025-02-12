@@ -13,6 +13,7 @@ class FirstController extends GetxController {
 
   // -------- Check For Palindrome ---------
   void checkPalindrome() {
+    if (sentence.value.isEmpty) return;
     final isPalindromeResult = isPalindrome(sentence.value);
     Get.dialog(
       AlertDialog(
