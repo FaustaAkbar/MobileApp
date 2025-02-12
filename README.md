@@ -45,6 +45,12 @@ A Flutter application with three screens that checks for palindromes, displays a
    flutter run
    ```
 
+## Download APK
+
+If you prefer to install the app directly, you can download the APK from the following link:
+
+[Download APK](https://github.com/FaustaAkbar/MobileApp/releases/download/v1.0.0/app-release.apk)
+
 ## Dependencies
 
 - **Flutter**: 3.22 or above
