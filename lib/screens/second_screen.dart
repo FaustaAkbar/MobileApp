@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:iconsax/iconsax.dart';
-import '../controllers/second_controller.dart';
-import '../routes/app_routes.dart';
+import 'package:myapp/controllers/second_controller.dart';
+import 'package:myapp/routes/app_routes.dart';
 
 class SecondScreen extends GetView<SecondController> {
   const SecondScreen({super.key});
@@ -12,18 +11,19 @@ class SecondScreen extends GetView<SecondController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+
+      // --------------- AppBar Section ---------------
       appBar: AppBar(
         elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Iconsax.arrow_left_24, color: Colors.black),
-          onPressed: () => Get.back(),
-        ),
+        leading: GestureDetector(
+            onTap: () => Get.back(),
+            child: Image(image: AssetImage("assets/icon/ic_back.png"))),
         title: Text(
           'Second Screen',
           style: GoogleFonts.poppins(
             color: Colors.black,
-            fontSize: 12,
-            fontWeight: FontWeight.w500,
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
           ),
         ),
         centerTitle: true,
@@ -35,11 +35,14 @@ class SecondScreen extends GetView<SecondController> {
           ),
         ),
       ),
+
+      // --------------- Body Section ---------------
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // --------------- Welcome Section ---------------
             Text(
               'Welcome',
               style: GoogleFonts.poppins(
@@ -49,6 +52,7 @@ class SecondScreen extends GetView<SecondController> {
               ),
             ),
             const SizedBox(height: 4),
+            // --------------- Name Section ---------------
             Obx(() => Text(
                   controller.name.value,
                   style: GoogleFonts.poppins(
@@ -58,6 +62,8 @@ class SecondScreen extends GetView<SecondController> {
                   ),
                 )),
             const Spacer(),
+
+            // --------------- Selected User Section ---------------
             Center(
               child: Obx(() => Text(
                     controller.selectedUser.value?.fullName ??
@@ -70,6 +76,8 @@ class SecondScreen extends GetView<SecondController> {
                   )),
             ),
             const Spacer(),
+
+            // --------------- Button Section (Choose a User) ---------------
             Padding(
               padding: const EdgeInsets.only(bottom: 24.0),
               child: SizedBox(

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:iconsax/iconsax.dart';
-import '../controllers/third_controller.dart';
+import 'package:myapp/controllers/third_controller.dart';
 
 class ThirdScreen extends GetView<ThirdController> {
   const ThirdScreen({super.key});
@@ -11,18 +10,19 @@ class ThirdScreen extends GetView<ThirdController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+
+      // --------------- AppBar Section ---------------
       appBar: AppBar(
         elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Iconsax.arrow_left_24, color: Colors.black),
-          onPressed: () => Get.back(),
-        ),
+        leading: GestureDetector(
+            onTap: () => Get.back(),
+            child: Image(image: AssetImage("assets/icon/ic_back.png"))),
         title: Text(
           'Third Screen',
           style: GoogleFonts.poppins(
             color: Colors.black,
-            fontSize: 12,
-            fontWeight: FontWeight.w500,
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
           ),
         ),
         centerTitle: true,
@@ -91,6 +91,8 @@ class ThirdScreen extends GetView<ThirdController> {
         }
         return true;
       },
+
+      // --------------- ListView Section ---------------
       child: ListView.separated(
         padding: const EdgeInsets.symmetric(vertical: 16),
         itemCount:
@@ -98,8 +100,6 @@ class ThirdScreen extends GetView<ThirdController> {
         separatorBuilder: (context, index) => Divider(
           color: Colors.grey[300],
           height: 1,
-          indent: 66,
-          endIndent: 0,
         ),
         itemBuilder: (context, index) {
           if (index == controller.users.length) {
@@ -118,6 +118,7 @@ class ThirdScreen extends GetView<ThirdController> {
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: Row(
                 children: [
+                  // --------------- User Image ---------------
                   ClipRRect(
                     borderRadius: BorderRadius.circular(25),
                     child: Image.network(
@@ -128,6 +129,8 @@ class ThirdScreen extends GetView<ThirdController> {
                     ),
                   ),
                   const SizedBox(width: 16),
+
+                  // --------------- User Details ---------------
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

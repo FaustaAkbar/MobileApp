@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../controllers/first_controller.dart';
 
 class FirstScreen extends GetView<FirstController> {
@@ -10,6 +11,7 @@ class FirstScreen extends GetView<FirstController> {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
+          // --------------- Assets For Background Image ---------------
           image: DecorationImage(
             image: AssetImage("assets/background/background.png"),
             fit: BoxFit.cover,
@@ -23,6 +25,7 @@ class FirstScreen extends GetView<FirstController> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    // --------------- Circle Image ---------------
                     Container(
                       width: 80,
                       height: 80,
@@ -37,15 +40,20 @@ class FirstScreen extends GetView<FirstController> {
                       ),
                     ),
                     const SizedBox(height: 48),
+
+                    // --------------- Input Form (Name) ---------------
                     TextField(
                       onChanged: (value) => controller.name.value = value,
-                      style: const TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.black),
                       decoration: InputDecoration(
                         hintText: 'Name',
-                        hintStyle:
-                            TextStyle(color: Colors.white.withOpacity(0.7)),
+                        hintStyle: GoogleFonts.poppins(
+                          color: Color.fromRGBO(104, 103, 119, 0.36),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
                         filled: true,
-                        fillColor: Colors.white.withOpacity(0.2),
+                        fillColor: Colors.white,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide.none,
@@ -57,15 +65,20 @@ class FirstScreen extends GetView<FirstController> {
                       ),
                     ),
                     const SizedBox(height: 16),
+
+                    // --------------- Input Form (Palindrome) ---------------
                     TextField(
                       onChanged: (value) => controller.sentence.value = value,
-                      style: const TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.black),
                       decoration: InputDecoration(
                         hintText: 'Palindrome',
-                        hintStyle:
-                            TextStyle(color: Colors.white.withOpacity(0.7)),
+                        hintStyle: GoogleFonts.poppins(
+                          color: Color.fromRGBO(104, 103, 119, 0.36),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
                         filled: true,
-                        fillColor: Colors.white.withOpacity(0.2),
+                        fillColor: Colors.white,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide.none,
@@ -77,6 +90,8 @@ class FirstScreen extends GetView<FirstController> {
                       ),
                     ),
                     const SizedBox(height: 24),
+
+                    // --------------- Button Check ---------------
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
@@ -89,16 +104,19 @@ class FirstScreen extends GetView<FirstController> {
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
-                        child: const Text(
+                        child: Text(
                           'CHECK',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
+                          style: GoogleFonts.poppins(
+                            color: Color(0xFFFFFFFF),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ),
                     ),
                     const SizedBox(height: 16),
+
+                    // --------------- Button Next ---------------
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
@@ -111,11 +129,12 @@ class FirstScreen extends GetView<FirstController> {
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
-                        child: const Text(
+                        child: Text(
                           'NEXT',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
+                          style: GoogleFonts.poppins(
+                            color: Color(0xFFFFFFFF),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ),
