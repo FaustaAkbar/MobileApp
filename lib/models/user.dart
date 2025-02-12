@@ -1,3 +1,9 @@
+/* 
+  Title: User Model
+  
+  Created by Fausta Akbar
+ */
+
 class User {
   final int id;
   final String email;

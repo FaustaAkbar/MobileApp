@@ -1,3 +1,9 @@
+/* 
+  Title: Check Palindrome Funtion
+  
+  Created by Fausta Akbar
+ */
+
 String cleanString(String text) {
   return text.toLowerCase().replaceAll(RegExp(r'[^a-z0-9]'), '');
 }

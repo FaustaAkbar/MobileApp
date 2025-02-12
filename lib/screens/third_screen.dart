@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/controllers/third_controller.dart';
+/* 
+  Title: Third Screen
+  
+  Created by Fausta Akbar
+ */
 
 class ThirdScreen extends GetView<ThirdController> {
   const ThirdScreen({super.key});
@@ -16,7 +21,11 @@ class ThirdScreen extends GetView<ThirdController> {
         elevation: 0,
         leading: GestureDetector(
             onTap: () => Get.back(),
-            child: Image(image: AssetImage("assets/icon/ic_back.png"))),
+            child: Image(
+              image: AssetImage("assets/icon/ic_back.png"),
+              width: 48,
+              height: 48,
+            )),
         title: Text(
           'Third Screen',
           style: GoogleFonts.poppins(

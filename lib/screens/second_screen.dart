@@ -3,6 +3,11 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/controllers/second_controller.dart';
 import 'package:myapp/routes/app_routes.dart';
+/* 
+  Title: Second Screen
+  
+  Created by Fausta Akbar
+ */
 
 class SecondScreen extends GetView<SecondController> {
   const SecondScreen({super.key});
@@ -17,7 +22,11 @@ class SecondScreen extends GetView<SecondController> {
         elevation: 0,
         leading: GestureDetector(
             onTap: () => Get.back(),
-            child: Image(image: AssetImage("assets/icon/ic_back.png"))),
+            child: Image(
+              image: AssetImage("assets/icon/ic_back.png"),
+              width: 48,
+              height: 48,
+            )),
         title: Text(
           'Second Screen',
           style: GoogleFonts.poppins(

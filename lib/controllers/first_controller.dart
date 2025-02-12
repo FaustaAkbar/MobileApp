@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/utils/palindrome_checker.dart';
+/* 
+  Title: First Controller
+  
+  Created by Fausta Akbar
+ */
 
 class FirstController extends GetxController {
   final name = ''.obs;
   final sentence = ''.obs;
 
+  // -------- Check For Palindrome ---------
   void checkPalindrome() {
     final isPalindromeResult = isPalindrome(sentence.value);
     Get.dialog(

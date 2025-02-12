@@ -1,5 +1,10 @@
 import 'package:get/get.dart';
 import 'package:myapp/models/user.dart';
+/* 
+  Title: Second Controller
+  
+  Created by Fausta Akbar
+ */
 
 class SecondController extends GetxController {
   final name = ''.obs;

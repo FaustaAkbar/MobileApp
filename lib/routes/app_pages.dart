@@ -6,6 +6,11 @@ import 'package:myapp/screens/first_screen.dart';
 import 'package:myapp/screens/second_screen.dart';
 import 'package:myapp/screens/third_screen.dart';
 import 'app_routes.dart';
+/* 
+  Title: APP Page Routes
+  
+  Created by Fausta Akbar
+ */
 
 class AppPages {
   static final pages = [

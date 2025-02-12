@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../controllers/first_controller.dart';
+/* 
+  Title: First Screen
+
+  Created by Fausta Akbar
+ */
 
 class FirstScreen extends GetView<FirstController> {
   const FirstScreen({super.key});
@@ -27,17 +32,14 @@ class FirstScreen extends GetView<FirstController> {
                   children: [
                     // --------------- Circle Image ---------------
                     Container(
-                      width: 80,
-                      height: 80,
+                      width: 116,
+                      height: 116,
                       decoration: BoxDecoration(
                         color: Colors.white.withOpacity(0.3),
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(
-                        Icons.person_outline,
-                        color: Colors.white,
-                        size: 40,
-                      ),
+                      child: const Image(
+                          image: AssetImage("assets/icon/person.png")),
                     ),
                     const SizedBox(height: 48),
 

@@ -2,6 +2,11 @@ import 'package:get/get.dart';
 import 'package:myapp/controllers/second_controller.dart';
 import 'package:myapp/models/user.dart';
 import 'package:myapp/services/user_service.dart';
+/* 
+  Title: Third Controller
+  
+  Created by Fausta Akbar
+ */
 
 class ThirdController extends GetxController {
   final UserService _userService = Get.find<UserService>();

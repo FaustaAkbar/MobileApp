@@ -1,6 +1,11 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../models/user.dart';
+/* 
+  Title: User Services
+  
+  Created by Fausta Akbar
+ */
 
 class UserService {
   static const String baseUrl = 'https://reqres.in/api';
